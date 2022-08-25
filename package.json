@@ -1,7 +1,22 @@
 {
   "name": "lw-ts-client",
   "packageManager": "yarn@3.2.3",
+  "dependencies": {
+    "portable-fetch": "3.0.0",
+    "url": "0.11.0"
+  },
+  "scripts": {
+    "build": "rm -rf built && swc src --out-dir built && tsc --pretty --skipLibCheck --declaration --emitDeclarationOnly",
+    "release": "standard-version",
+    "lint": "eslint --ext .js,.ts src"
+  },
   "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@types/node": "^18.7.13",
+    "@types/prettier": "^2",
+    "openapi-typescript-codegen": "^0.23.0",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
     "typescript": "^4.7.4"
   }
 }
