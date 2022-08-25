@@ -7,8 +7,8 @@ BASEDIR=$(dirname 0)
 
 java -jar swagger-codegen-cli-3.0.35.jar generate \
 -i $LEMONWAY_API_SWAGGER_URL \
--l typescript-node -o $BASEDIR/src/api
+-l typescript-fetch -o $BASEDIR/src/api
 
 java -jar swagger-codegen-cli-3.0.35.jar generate \
 -i $LEMONWAY_AUTH_SWAGGER_URL \
--l typescript-node -o $BASEDIR/src/auth
+-l typescript-fetch -o $BASEDIR/src/auth
