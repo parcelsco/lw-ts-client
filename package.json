@@ -1,17 +1,20 @@
 {
   "name": "lw-ts-client",
   "packageManager": "yarn@3.2.3",
-  "dependencies": {
-    "portable-fetch": "3.0.0",
-    "url": "0.11.0"
-  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
-    "build": "rm -rf built && swc src --out-dir built && tsc --pretty --skipLibCheck --declaration --emitDeclarationOnly",
+    "build": "rm -rf dist && swc src --out-dir dist && tsc --pretty --skipLibCheck --declaration --emitDeclarationOnly",
     "release": "standard-version",
     "lint": "eslint --ext .js,.ts src"
   },
   "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.5.1",
     "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.242",
     "@types/node": "^18.7.13",
     "@types/prettier": "^2",
     "openapi-typescript-codegen": "^0.23.0",
