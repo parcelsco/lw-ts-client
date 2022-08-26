@@ -5,10 +5,10 @@ LEMONWAY_AUTH_SWAGGER_URL=${LEMONWAY_AUTH_SWAGGER_URL:-"https://sandbox-api.lemo
 
 BASEDIR=$(dirname 0)
 
-java -jar swagger-codegen-cli-3.0.35.jar generate \
+yarn openapi-generator-cli generate \
 -i $LEMONWAY_API_SWAGGER_URL \
 -l typescript-fetch -o $BASEDIR/src/api
 
-java -jar swagger-codegen-cli-3.0.35.jar generate \
+yarn openapi-generator-cli generate \
 -i $LEMONWAY_AUTH_SWAGGER_URL \
 -l typescript-fetch -o $BASEDIR/src/auth
