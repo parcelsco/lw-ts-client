@@ -7,8 +7,8 @@ BASEDIR=$(dirname 0)
 
 yarn openapi-generator-cli generate \
 -i $LEMONWAY_API_SWAGGER_URL \
--l typescript-fetch -o $BASEDIR/src/api
+-g typescript-fetch -o $BASEDIR/src/api --skip-validate-spec
 
 yarn openapi-generator-cli generate \
 -i $LEMONWAY_AUTH_SWAGGER_URL \
--l typescript-fetch -o $BASEDIR/src/auth
+-g typescript-fetch -o $BASEDIR/src/auth --skip-validate-spec

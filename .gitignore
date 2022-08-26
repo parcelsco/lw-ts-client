@@ -12,3 +12,7 @@
 
 # Build files
 built
+
+# Open api codegen
+.openapi-generator-ignore
+.openapi-generator
