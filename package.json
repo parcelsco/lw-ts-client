@@ -2,10 +2,6 @@
   "name": "lw-ts-client",
   "packageManager": "yarn@3.2.3",
   "main": "dist/index.js",
-  "files": [
-    "dist",
-    "src"
-  ],
   "scripts": {
     "build": "rm -rf dist && swc src --out-dir dist && tsc --pretty --skipLibCheck --declaration --emitDeclarationOnly",
     "release": "standard-version",
