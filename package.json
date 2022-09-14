@@ -1,11 +1,11 @@
 {
   "name": "lw-ts-client",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "packageManager": "yarn@3.2.3",
   "type":"module",
   "module": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && swc src --out-dir dist && tsc --pretty --skipLibCheck --declaration --emitDeclarationOnly",
+    "build": "rm -rf dist && swc src -s true --out-dir dist && tsc --pretty --skipLibCheck --declaration --emitDeclarationOnly",
     "release": "standard-version",
     "lint": "eslint --ext .js,.ts src"
   },
